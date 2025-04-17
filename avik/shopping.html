@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+         .nav{
+             height:170px;
+                width : 100%;
+             background-color: bisque;
+            }
+            .nav .add p b{  margin-left: 1210px;
+            font-size: 20px;
+            color: rgba(23, 80, 72, 0.932);
+            text-decoration: none;
+          } 
+          .nav .add .page ul li a{
+             text-decoration: none;
+             font-size: 20px;
+             list-style-type: none;
+             padding-right: 475px;
+             
+            } 
+          .page ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(100, 31, 31);
+  transition: color 0.3s ease;
+}
+
+/* Underline hover effect */
+.page ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: cornflowerblue;
+  transition: width 0.3s ease;
+}
+
+.page ul li a:hover {
+  color: rgb(116, 21, 53);
+}
+
+/* Animate underline */
+.page ul li a:hover::after {
+  width: 50%;
+}
+.page ul li a:hover::after{
+  border: solid black 1px;
+}
+    /*header css over*/      
+    /* item css */
         .container {
             display: flex;
             justify-content: space-between;
@@ -28,20 +78,12 @@
         }
 
 
-        .cart {
-            width: 35%;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
+     
         .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 0;
+            padding: 18px 0;
             border-bottom: 1px solid #ddd;
         }
 
@@ -62,41 +104,107 @@
 
 </head>
 <body>
-    <h2 style="text-align: center;">Shoping Cart</h2>
-    <div class="container">
+    <div class="nav"> <img src="##" alt=""><center><h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: crimson;"><u><b>Shopping Items</b></u></h1></center> 
+        <div class="add"><a href="https://www.google.com/maps/place/Harihar+Traders/@22.5515546,72.957746,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4c2784be1859:0x8e996e2d47274487!8m2!3d22.5515546!4d72.9603209!16s%2Fg%2F11f1vp1zlv?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"target="_blank" style="text-decoration: none;"><p style="margin-top: -65px;"><b> 49,Sardar Ganj</b></p><p><b>Anand,Gujarat-388001</b></p></a>
+            <div class="page"><ul style="display: flex;"> 
+                <li style="list-style-type: none;"><b><a href="./home.html" target="_blank">Home</a></b></li>
+                <li style="list-style-type: none;"><b><a href="./shopping.html">Shoping items</a></b></li>
+                <li style="list-style-type: none;"><b><a href="./contact.html"target="_blank">Contact Us</a></b></li>
+            </ul></div>
+
+            <div class="container">
         <div class="product" style:display:content:flex;>
             <table>
                 <tr>
-                    <th><img src="https://picsum.photos/200" alt="product 1">
-                        <h3>Product 1</h3>
-                        <p>Rs.10</p>
-                        <button onclick="addToCart('product',10.00)">Add to cart</button>
+                    <th><img src=## alt="product ">
+                        <h3> Rice (7-Star)</h3>
+                        <p>Bag-30Kg-Rs.960</p>                        
+                        <p>Rs.32/kg</p>
+                      
                     </th>
-                    <th><img src="https://picsum.photos/200" alt="product 2">
-                        <h3>Product 2</h3>
-                        <p>Rs.20</p>
-                        <button onclick="addToCart('product 2',20.00)">Add to cart</button>
+                    <th><img src=## alt="product ">
+                        <h3>Rice (Dhani)</h3>
+                        <p>Bag-30kg-Rs.1500 </p>
+                        <p>Rs.50/kg</p>
+                       
+                        <th><img src=## alt="product ">
+                            <h3> Rice (Gopi)</h3>
+                            <p>Bag-26Kg-Rs.1222</p>                        
+                            <p>Rs.47/kg</p>
+                          
+                        </th>
+                        <th><img src=## alt="product ">
+                            <h3>Tuar Dar (Double Mint)</h3>
+                            <p>Bag-30kg-Rs.3720  </p>
+                            <p>Rs.114/kg</p>
+
                     </th>
+                    <th><img src=## alt="product ">
+                        <h3>Tuar Dar (Laxmi)</h3>
+                        <p>Bag-30kg-Rs.3720 </p>
+                        <p>Rs.124/kg</p>
+
+                </th>
+                <th><img src=## alt="product ">
+                    <h3>Tuar Dar (imported)</h3>
+                    <p>Bag-30kg-Rs. 3060</p>
+                    <p>Rs.102/kg</p>
+
+            </th>
                 </tr>
-                <tr>
-                    <td><img src="https://picsum.photos/200" alt="">
-                        <h3>Product 3</h3>
-                        <p>Rs.30</p>
-                        <button onclick="addToCart('product 3',30.00)">Add to cart</button>
-                    </td>
-                    <td><img src="https://picsum.photos/200" alt="">
-                        <h3>Product 4</h3>
-                        <p>Rs.40</p>
-                        <button onclick="addToCart('product 4',40.00)">Add to cart</button>
-                    </td>
+               <b>
+                 <tr>
+                    <td><img src=## alt="product ">
+                        <b><h3>Chana Dar (Angur)</h3></b>
+                        <b><p>Bag-30kg-Rs.2160 </p></b>
+                        <b><p>Rs.72/kg</p></b>
+    
+                </td>
+                <td><img src=## alt="product ">
+                    <b><h3>Chana Dar (Sakhi)</h3></b>
+                    <b><p>Bag-30kg-Rs.2160 </p></b>
+                    <b><p>Rs.72/kg</p></b>
+
+            </td>
+            <td><img src=## alt="product ">
+                <b><h3>Soji (Energetic)</h3></b>
+                <b><p>Bag-10kg-Rs.450 </p></b>
+                <b><p>Rs.45/kg</p></b>
+
+        </td>
+        <td><img src=## alt="product ">
+            <b><h3>Soji</h3></b>
+            <b><p>Bag-30kg-Rs.1200</p></b>
+            <b><p>Rs.40/kg</p></b>
+
+    </td>
+        <td><img src=## alt="product ">
+            <b><h3>Maida (Energetic)</h3></b>
+            <b><p>Bag-10kg-Rs.430</p></b>
+            <b><p>Rs.43/kg</p></b>
+
+    </td>
+    <td><img src=## alt="product ">
+        <b><h3>Maida (Energetic)</h3></b>
+        <b><p>Bag-10kg-Rs.430</p></b>
+        <b><p>Rs.43/kg</p></b>
+
+</td>
+
+</td>
+<td><img src=## alt="product ">
+    <b><h3>Maida (Bharatgold)</h3></b>
+    <b><p>Bag-30kg-Rs.950 </p></b>
+    <b><p>Rs.32/kg</p></b>
+
+</td>
                 </tr>
+            </b>
             </table>
         </div>
-        <div class="cart"></div>
-        <ul id="cart"></ul>
+           </div>
     </div>
-    </div>
-    <script>
+    <!-- <script>
 
         let cart = {};
 
@@ -141,7 +249,7 @@
                 cartlist.appendChild(Listitem);
             }
         }
-    </script>
+    </script> -->
 
 </body>
 </html>
