@@ -324,52 +324,7 @@
                 </div>
             </div>
         </div>
-        <!-- <script>
-
-        let cart = {};
-
-        function addToCart(productName, productPrice) {
-            if (cart[productName]) {
-                cart[productName].quantity += 1
-                cart[productName].totalPrice += productPrice
-            }
-            else {
-                cart[productName] = {
-                    quantity: 1,
-                    Price: productPrice,
-                    totalPrice: productPrice
-                };
-
-            }
-            updateCartDisplay();
-        }
-        function removeFromCart(productName) {
-            if (cart[productName]) {
-                cart[productName].quantity -= 1;
-                cart[productName].totalPrice -= cart[productName].Price;
-                if (cart[productName].quantity <= 0){
-                    delete cart[productName];
-                }
-            }
-
-            updateCartDisplay();
-        }
-        function updateCartDisplay() {
-            const cartlist = document.getElementById('cart');
-            cartlist.innerHTML = '';
-
-            for (let product in cart) {
-                const Listitem = document.createElement('li');
-                Listitem.classList.add('cart-item');
-                Listitem.innerHTML = `
-        ${product} - Qty: ${cart[product].quantity} - Rs ${cart[product].totalPrice.toFixed(2)}
-                    <button onclick="addToCart('${product}', ${cart[product].Price})">+</button>
-                    <button class="remove" onclick="removeFromCart('${product}')">-</button>
-        `;
-                cartlist.appendChild(Listitem);
-            }
-        }
-    </script> -->
+        
 
 </body>
 
